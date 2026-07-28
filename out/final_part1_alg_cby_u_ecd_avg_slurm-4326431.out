@@ -1,0 +1,214 @@
+Comparison study: Utility-based optimization of Fujikawa’s basket trial design
+Log of job execution on bwForCluster BinAC 2
+Job name: part1_alg_cby_u_ecd_avg
+Temporary directory: /scratch/4326431
+Date:
+Wed Jul 22 11:32:19 AM CEST 2026
+Node details:
+Linux node1-084 5.14.0-687.25.1.el9_8.x86_64 #1 SMP PREEMPT_DYNAMIC Mon Jul 13 14:58:05 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+
+
+--------------------------------------------------------------------------------
+Loading modules:
+
+
+--------------------------------------------------------------------------------
+Rscript output:
+Loading required package: renv
+
+Attaching package: ‘renv’
+
+The following objects are masked from ‘package:stats’:
+
+    embed, update
+
+The following objects are masked from ‘package:utils’:
+
+    history, upgrade
+
+The following objects are masked from ‘package:base’:
+
+    autoload, load, remove, use
+
+[1] "Start time: 2026-07-22 11:32:23.472531"
+
+Attaching package: ‘baskoptr’
+
+The following object is masked from ‘package:baskwrap’:
+
+    get_scenarios
+
+Loading required package: foreach
+Loading required package: future
+
+Attaching package: ‘future’
+
+The following objects are masked from ‘package:renv’:
+
+    plan, run
+
+── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.2.1     ✔ readr     2.2.0
+✔ forcats   1.0.1     ✔ stringr   1.6.0
+✔ ggplot2   4.0.3     ✔ tibble    3.3.1
+✔ lubridate 1.9.5     ✔ tidyr     1.3.2
+✔ purrr     1.2.2     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ purrr::accumulate() masks foreach::accumulate()
+✖ dplyr::filter()     masks stats::filter()
+✖ dplyr::lag()        masks stats::lag()
+✖ purrr::modify()     masks renv::modify()
+✖ purrr::when()       masks foreach::when()
+ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
+Starting run(s) of part 1 in total at 2026-07-22 11:32:26.030679.
+Study parameters assigned to global environment.
+All necessary folders were found.
+All necessary directories were found empty.
+Planning sequential session because alg_cby doesn't need parallelization.
+Starting run(s) of alg_cby at 2026-07-22 11:32:26.39543.
+Running algorithm alg_cby for the utility function u_ecd_avg.
+[11:32:26.398] (0.000s => +0.001s) initiate: 0/1060 (+0) '' {clear=TRUE, enabled=TRUE, status=}
+[11:32:26.426] (0.028s => +0.028s) update: 0/1060 (+0) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[11:34:02.099] (95.702s => +0.001s) update: 2/1060 (+2) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[11:34:50.035] (143.638s => +0.001s) update: 3/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[11:35:38.040] (191.642s => +0.001s) update: 4/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[11:36:26.118] (239.721s => +0.001s) update: 5/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[11:37:13.851] (287.453s => +0.001s) update: 6/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[11:38:01.730] (335.333s => +0.001s) update: 7/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[11:38:49.461] (383.064s => +0.001s) update: 8/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[11:39:37.264] (430.866s => +0.001s) update: 9/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[11:40:24.881] (478.484s => +0.001s) update: 10/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[11:42:09.481] (583.083s => +0.000s) update: 11/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[11:42:57.128] (630.730s => +0.001s) update: 12/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[11:43:45.250] (678.852s => +0.001s) update: 13/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[11:45:29.548] (783.150s => +0.001s) update: 14/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[11:47:12.840] (886.443s => +0.006s) update: 15/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[11:49:00.042] (993.644s => +0.001s) update: 16/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[11:49:47.320] (1040.922s => +0.001s) update: 17/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[11:51:29.238] (1142.841s => +0.001s) update: 18/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[11:53:11.103] (1244.705s => +0.001s) update: 19/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[11:54:55.962] (1349.565s => +0.001s) update: 20/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[11:56:41.860] (1455.463s => +0.000s) update: 21/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[11:58:28.432] (1562.034s => +0.001s) update: 22/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[12:00:15.710] (1669.313s => +0.001s) update: 23/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[12:01:59.299] (1772.902s => +0.001s) update: 24/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[12:03:42.537] (1876.139s => +0.001s) update: 25/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[12:05:28.909] (1982.512s => +0.001s) update: 26/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[12:07:15.532] (2089.134s => +0.001s) update: 27/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[12:09:01.916] (2195.519s => +0.001s) update: 28/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[12:10:48.819] (2302.421s => +0.000s) update: 29/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[12:12:35.533] (2409.136s => +0.001s) update: 30/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[12:14:22.730] (2516.332s => +0.001s) update: 31/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[12:16:09.628] (2623.231s => +0.001s) update: 32/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[12:17:56.876] (2730.478s => +0.001s) update: 33/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[12:19:43.548] (2837.151s => +0.001s) update: 34/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[12:21:30.687] (2944.289s => +0.001s) update: 35/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[12:23:17.597] (3051.200s => +0.001s) update: 36/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[12:25:05.030] (3158.633s => +0.001s) update: 37/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[12:26:51.381] (3264.984s => +0.001s) update: 38/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[12:28:38.751] (3372.354s => +0.000s) update: 39/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[12:30:25.408] (3479.010s => +0.001s) update: 40/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[12:32:12.629] (3586.232s => +0.001s) update: 41/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[12:33:59.722] (3693.324s => +0.001s) update: 42/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[12:35:46.582] (3800.184s => +0.001s) update: 43/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[12:37:33.071] (3906.673s => +0.001s) update: 44/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[12:39:19.865] (4013.467s => +0.000s) update: 45/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[12:41:07.086] (4120.689s => +0.001s) update: 46/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[12:42:53.578] (4227.181s => +0.001s) update: 47/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[12:44:40.007] (4333.609s => +0.001s) update: 48/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[12:46:27.376] (4440.979s => +0.001s) update: 49/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[12:48:13.970] (4547.572s => +0.001s) update: 50/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[12:50:00.506] (4654.109s => +0.001s) update: 51/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[12:51:47.205] (4760.807s => +0.001s) update: 52/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[12:53:34.430] (4868.033s => +0.001s) update: 53/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[12:55:21.255] (4974.857s => +0.001s) update: 54/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[12:57:08.437] (5082.039s => +0.001s) update: 55/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[12:58:55.188] (5188.790s => +0.001s) update: 56/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[13:00:42.386] (5295.989s => +0.000s) update: 57/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[13:02:29.011] (5402.614s => +0.001s) update: 58/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[13:04:15.934] (5509.536s => +0.001s) update: 59/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[13:06:02.600] (5616.203s => +0.001s) update: 60/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[13:07:49.389] (5722.991s => +0.001s) update: 61/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[13:09:36.735] (5830.338s => +0.001s) update: 62/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[13:11:23.467] (5937.069s => +0.001s) update: 63/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[13:13:10.696] (6044.299s => +0.001s) update: 64/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[13:14:57.674] (6151.277s => +0.001s) update: 65/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[13:16:44.504] (6258.107s => +0.001s) update: 66/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[13:18:31.648] (6365.250s => +0.001s) update: 67/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[13:20:18.297] (6471.899s => +0.001s) update: 68/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[13:22:05.112] (6578.714s => +0.001s) update: 69/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[13:23:52.154] (6685.757s => +0.001s) update: 70/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+[13:25:39.120] (6792.722s => +0.001s) update: 71/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+
+Call:
+nloptr(x0 = x0, eval_f = fn, lb = lower, ub = upper, eval_g_ineq = hin, 
+    opts = opts)
+
+
+Minimization using NLopt version 2.10.0 
+
+NLopt solver status: 4 ( NLOPT_XTOL_REACHED: Optimization stopped because 
+xtol_rel or xtol_abs (above) was reached. )
+
+Number of Iterations....: 69 
+Termination conditions:  stopval: -Inf	xtol_rel: 1e-06	maxeval: 1000	ftol_rel: 0	ftol_abs: 0 
+Number of inequality constraints:  0 
+Number of equality constraints:    0 
+Optimal value of objective function:  -3.2947671318912 
+Optimal value of controls: 0.9979126 0.3730119 0.2028833
+Finished run(s) of alg_cby after 1.88689900126722 hours.
+Finished run(s) of part 1 in total after 1.88700049718221 hours.
+[13:25:39.236] (6792.839s => +0.000s) shutdown: 72/1060 (+1) 'Executing one run of alg_cby.' {clear=TRUE, enabled=TRUE, status=}
+
+
+NULL
+R version 4.6.0 (2026-04-24)
+Platform: x86_64-pc-linux-gnu
+Running under: Rocky Linux 9.8 (Blue Onyx)
+
+Matrix products: default
+BLAS:   /opt/bwhpc/common/math/R/4.6.0-mkl-2025.0-gnu-14.2/lib64/R/lib/libRblas.so 
+LAPACK: FlexiBLAS OPENBLAS-OPENMP;  LAPACK version 3.9.0
+
+Random number generation:
+ RNG:     L'Ecuyer-CMRG 
+ Normal:  Inversion 
+ Sample:  Rejection 
+ 
+locale:
+ [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+ [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+ [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+ [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+ [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+
+time zone: Europe/Berlin
+tzcode source: system (glibc)
+
+attached base packages:
+[1] stats     graphics  grDevices datasets  utils     methods   base     
+
+other attached packages:
+ [1] microbenchmark_1.5.0 lubridate_1.9.5      forcats_1.0.1       
+ [4] stringr_1.6.0        dplyr_1.2.1          purrr_1.2.2         
+ [7] readr_2.2.0          tidyr_1.3.2          tibble_3.3.1        
+[10] ggplot2_4.0.3        tidyverse_2.0.0      doFuture_1.2.2      
+[13] future_1.70.0        foreach_1.5.2        baskoptr_1.0.4      
+[16] baskwrap_1.0.3       progressr_1.0.0      renv_1.2.3          
+
+loaded via a namespace (and not attached):
+ [1] gmp_0.7-5.1            generics_0.1.4         stringi_1.8.7         
+ [4] listenv_1.0.0          hms_1.1.4              digest_0.6.39         
+ [7] magrittr_2.0.5         grid_4.6.0             timechange_0.4.0      
+[10] RColorBrewer_1.1-3     iterators_1.0.14       metaheuristicOpt_2.0.0
+[13] rprojroot_2.1.1        optimizr_1.0.1         basksim_2.2.0         
+[16] scales_1.4.0           codetools_0.2-20       cli_3.6.6             
+[19] rlang_1.3.0            parallelly_1.48.0      future.apply_1.20.2   
+[22] withr_3.0.3            tools_4.6.0            parallel_4.6.0        
+[25] tzdb_0.5.0             nloptr_2.2.1           here_1.0.2            
+[28] globals_0.19.1         vctrs_0.7.3            R6_2.6.1              
+[31] lifecycle_1.0.5        arrangements_1.1.10    pkgconfig_2.0.3       
+[34] pillar_1.11.1          gtable_0.3.6           glue_1.8.1            
+[37] Rcpp_1.1.2             tidyselect_1.2.1       farver_2.1.2          
+[40] baskexact_1.0.2        compiler_4.6.0         S7_0.2.2              

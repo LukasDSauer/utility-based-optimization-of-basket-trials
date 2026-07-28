@@ -1,0 +1,17 @@
+#!/bin/bash
+# GENERATED AUTOMATICALLY BY gen_run_final_files.R, DO NOT EDIT BY HAND.
+
+mkdir out/tmp_part1_alg_sa100_u_ecd_avg
+mkdir out/tmp_part1_alg_sa100_u_2pow_avg
+mkdir out/tmp_part1_alg_sa10_u_ecd_avg
+mkdir out/tmp_part1_alg_sa10_u_2pow_avg
+mkdir out/tmp_part1_alg_sa1_u_ecd_avg
+mkdir out/tmp_part1_alg_sa1_u_2pow_avg
+mkdir out/tmp_part1_alg_saun_u_ecd_avg
+mkdir out/tmp_part1_alg_saun_u_2pow_avg
+mkdir out/tmp_part1_alg_gwo_u_ecd_avg
+mkdir out/tmp_part1_alg_gwo_u_2pow_avg
+mkdir out/tmp_part1_alg_cby_u_ecd_avg
+mkdir out/tmp_part1_alg_cby_u_2pow_avg
+mkdir out/tmp_part1_alg_grd_u_ecd_avg
+mkdir out/tmp_part1_alg_grd_u_2pow_avg

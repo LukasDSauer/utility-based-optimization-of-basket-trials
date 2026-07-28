@@ -1,0 +1,185 @@
+Comparison study: Utility-based optimization of Fujikawa’s basket trial design
+Log of job execution on bwForCluster BinAC 2
+Job name: part2n3_u_ewp_sc_lrg20
+Temporary directory: /scratch/4326483
+Date:
+Wed Jul 22 11:52:48 AM CEST 2026
+Node details:
+Linux node2-086 5.14.0-687.25.1.el9_8.x86_64 #1 SMP PREEMPT_DYNAMIC Mon Jul 13 14:58:05 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+
+
+--------------------------------------------------------------------------------
+Loading modules:
+
+
+--------------------------------------------------------------------------------
+Rscript output:
+Loading required package: renv
+
+Attaching package: ‘renv’
+
+The following objects are masked from ‘package:stats’:
+
+    embed, update
+
+The following objects are masked from ‘package:utils’:
+
+    history, upgrade
+
+The following objects are masked from ‘package:base’:
+
+    autoload, load, remove, use
+
+[1] "Start time: 2026-07-22 11:52:51.740444"
+
+Attaching package: ‘baskoptr’
+
+The following object is masked from ‘package:baskwrap’:
+
+    get_scenarios
+
+Loading required package: foreach
+Loading required package: future
+
+Attaching package: ‘future’
+
+The following objects are masked from ‘package:renv’:
+
+    plan, run
+
+── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.2.1     ✔ readr     2.2.0
+✔ forcats   1.0.1     ✔ stringr   1.6.0
+✔ ggplot2   4.0.3     ✔ tibble    3.3.1
+✔ lubridate 1.9.5     ✔ tidyr     1.3.2
+✔ purrr     1.2.2     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ purrr::accumulate() masks foreach::accumulate()
+✖ dplyr::filter()     masks stats::filter()
+✖ dplyr::lag()        masks stats::lag()
+✖ purrr::modify()     masks renv::modify()
+✖ purrr::when()       masks foreach::when()
+ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
+Study parameters assigned to global environment.
+All necessary folders were found.
+All necessary directories were found empty.
+Planning cluster session with 50 workers.
+Optimizing the utility function u_ewp for the scenario sc_lrg20.
+[11:55:09.380] (0.000s => +0.001s) initiate: 0/1003 (+0) '' {clear=TRUE, enabled=TRUE, status=}
+[11:55:09.408] (0.028s => +0.028s) update: 0/1003 (+0) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+Use of future_apply() in gridsearch is switched on.
+[11:55:16.055] (6.675s => +0.019s) update: 51/1003 (+51) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[11:55:21.675] (12.295s => +0.330s) update: 101/1003 (+50) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[11:55:27.429] (18.049s => +0.228s) update: 147/1003 (+46) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[11:55:33.266] (23.886s => +0.226s) update: 197/1003 (+50) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[11:55:38.828] (29.447s => +0.049s) update: 243/1003 (+46) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[11:55:44.411] (35.031s => +0.164s) update: 293/1003 (+50) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[11:55:49.532] (40.152s => +0.290s) update: 337/1003 (+44) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[11:55:54.748] (45.368s => +0.433s) update: 383/1003 (+46) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[11:56:00.238] (50.858s => +0.429s) update: 430/1003 (+47) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[11:56:05.658] (56.278s => +0.153s) update: 479/1003 (+49) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[11:56:10.799] (61.419s => +0.136s) update: 523/1003 (+44) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[11:56:15.927] (66.547s => +0.001s) update: 566/1003 (+43) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[11:56:20.932] (71.551s => +0.497s) update: 599/1003 (+33) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[11:56:25.989] (76.609s => +0.529s) update: 640/1003 (+41) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[11:56:31.159] (81.779s => +0.105s) update: 685/1003 (+45) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[11:56:36.219] (86.839s => +0.033s) update: 732/1003 (+47) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[11:56:41.274] (91.893s => +0.032s) update: 773/1003 (+41) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[11:56:46.366] (96.986s => +0.039s) update: 813/1003 (+40) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[11:56:51.665] (102.285s => +0.437s) update: 853/1003 (+40) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[11:56:57.167] (107.787s => +0.406s) update: 899/1003 (+46) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[11:57:02.167] (112.787s => +0.116s) update: 946/1003 (+47) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[11:57:07.354] (117.974s => +0.326s) update: 973/1003 (+27) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[11:57:13.172] (123.792s => +0.040s) update: 987/1003 (+14) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[11:57:20.173] (130.793s => +0.001s) update: 994/1003 (+7) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[11:57:27.002] (137.622s => +0.004s) update: 997/1003 (+3) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[11:57:32.295] (142.915s => +0.002s) update: 999/1003 (+2) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[11:57:40.611] (151.231s => +0.001s) update: 1001/1003 (+2) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[11:57:40.613] (151.232s => +0.000s) shutdown: 1003/1003 (+2) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+Calculating performance measures for optimal parameters found by utility function u_ewp in the scenario sc_lrg20
+[11:57:40.780] (0.000s => +0.001s) initiate: 0/23 (+0) '' {clear=TRUE, enabled=TRUE, status=}
+[11:57:40.780] (0.001s => +0.000s) update: 0/23 (+0) 'Calculating performance measures for optimal parameters found by utility function u_ewp in the scenario sc_lrg20' {clear=TRUE, enabled=TRUE, status=}
+[11:58:58.659] (77.880s => +0.024s) update: 3/23 (+3) 'Calculating performance measures for optimal parameters found by utility function u_ewp in the scenario sc_lrg20' {clear=TRUE, enabled=TRUE, status=}
+[11:59:15.289] (94.509s => +0.023s) update: 4/23 (+1) 'Calculating performance measures for optimal parameters found by utility function u_ewp in the scenario sc_lrg20' {clear=TRUE, enabled=TRUE, status=}
+[12:04:34.803] (414.024s => +0.040s) update: 5/23 (+1) 'Calculating performance measures for optimal parameters found by utility function u_ewp in the scenario sc_lrg20' {clear=TRUE, enabled=TRUE, status=}
+[12:04:42.169] (421.389s => +0.062s) update: 6/23 (+1) 'Calculating performance measures for optimal parameters found by utility function u_ewp in the scenario sc_lrg20' {clear=TRUE, enabled=TRUE, status=}
+[12:05:04.874] (444.094s => +0.044s) update: 8/23 (+2) 'Calculating performance measures for optimal parameters found by utility function u_ewp in the scenario sc_lrg20' {clear=TRUE, enabled=TRUE, status=}
+[12:11:55.178] (854.398s => +0.034s) update: 9/23 (+1) 'Calculating performance measures for optimal parameters found by utility function u_ewp in the scenario sc_lrg20' {clear=TRUE, enabled=TRUE, status=}
+[12:12:03.414] (862.634s => +0.029s) update: 10/23 (+1) 'Calculating performance measures for optimal parameters found by utility function u_ewp in the scenario sc_lrg20' {clear=TRUE, enabled=TRUE, status=}
+[12:12:19.514] (878.735s => +0.010s) update: 11/23 (+1) 'Calculating performance measures for optimal parameters found by utility function u_ewp in the scenario sc_lrg20' {clear=TRUE, enabled=TRUE, status=}
+[12:12:55.579] (914.799s => +0.118s) update: 13/23 (+2) 'Calculating performance measures for optimal parameters found by utility function u_ewp in the scenario sc_lrg20' {clear=TRUE, enabled=TRUE, status=}
+[12:13:00.842] (920.062s => +0.035s) update: 20/23 (+7) 'Calculating performance measures for optimal parameters found by utility function u_ewp in the scenario sc_lrg20' {clear=TRUE, enabled=TRUE, status=}
+[12:13:03.225] (922.446s => +0.004s) update: 23/23 (+3) 'Calculating performance measures for optimal parameters found by utility function u_ewp in the scenario sc_lrg20' {clear=TRUE, enabled=TRUE, status=}
+Calculating performance measures for the parameters suggested by Fujikawa et al. (fuj1)
+[12:13:03.256] (0.000s => +0.001s) initiate: 0/23 (+0) '' {clear=TRUE, enabled=TRUE, status=}
+[12:13:03.256] (0.001s => +0.000s) update: 0/23 (+0) 'Calculating performance measures for the parameters suggested by Fujikawa et al. (fuj1)' {clear=TRUE, enabled=TRUE, status=}
+[12:14:15.383] (72.127s => +0.079s) update: 3/23 (+3) 'Calculating performance measures for the parameters suggested by Fujikawa et al. (fuj1)' {clear=TRUE, enabled=TRUE, status=}
+[12:19:31.849] (388.593s => +0.032s) update: 5/23 (+2) 'Calculating performance measures for the parameters suggested by Fujikawa et al. (fuj1)' {clear=TRUE, enabled=TRUE, status=}
+[12:19:38.181] (394.926s => +0.043s) update: 7/23 (+2) 'Calculating performance measures for the parameters suggested by Fujikawa et al. (fuj1)' {clear=TRUE, enabled=TRUE, status=}
+[12:26:07.525] (784.269s => +0.024s) update: 9/23 (+2) 'Calculating performance measures for the parameters suggested by Fujikawa et al. (fuj1)' {clear=TRUE, enabled=TRUE, status=}
+[12:26:14.462] (791.206s => +0.027s) update: 10/23 (+1) 'Calculating performance measures for the parameters suggested by Fujikawa et al. (fuj1)' {clear=TRUE, enabled=TRUE, status=}
+[12:26:29.185] (805.930s => +0.002s) update: 11/23 (+1) 'Calculating performance measures for the parameters suggested by Fujikawa et al. (fuj1)' {clear=TRUE, enabled=TRUE, status=}
+[12:27:05.914] (842.659s => +0.051s) update: 13/23 (+2) 'Calculating performance measures for the parameters suggested by Fujikawa et al. (fuj1)' {clear=TRUE, enabled=TRUE, status=}
+[12:27:08.136] (844.881s => +0.003s) update: 23/23 (+10) 'Calculating performance measures for the parameters suggested by Fujikawa et al. (fuj1)' {clear=TRUE, enabled=TRUE, status=}
+Calculating performance measures for the parameters suggested by Fujikawa et al. (fuj2)
+[12:27:08.158] (0.000s => +0.001s) initiate: 0/23 (+0) '' {clear=TRUE, enabled=TRUE, status=}
+[12:27:08.159] (0.001s => +0.000s) update: 0/23 (+0) 'Calculating performance measures for the parameters suggested by Fujikawa et al. (fuj2)' {clear=TRUE, enabled=TRUE, status=}
+[12:28:19.707] (71.549s => +0.032s) update: 3/23 (+3) 'Calculating performance measures for the parameters suggested by Fujikawa et al. (fuj2)' {clear=TRUE, enabled=TRUE, status=}
+[12:33:33.676] (385.518s => +0.015s) update: 5/23 (+2) 'Calculating performance measures for the parameters suggested by Fujikawa et al. (fuj2)' {clear=TRUE, enabled=TRUE, status=}
+[12:33:48.020] (399.862s => +0.001s) update: 8/23 (+3) 'Calculating performance measures for the parameters suggested by Fujikawa et al. (fuj2)' {clear=TRUE, enabled=TRUE, status=}
+[12:40:05.191] (777.033s => +0.002s) update: 9/23 (+1) 'Calculating performance measures for the parameters suggested by Fujikawa et al. (fuj2)' {clear=TRUE, enabled=TRUE, status=}
+[12:40:14.376] (786.218s => +0.015s) update: 10/23 (+1) 'Calculating performance measures for the parameters suggested by Fujikawa et al. (fuj2)' {clear=TRUE, enabled=TRUE, status=}
+[12:40:20.852] (792.694s => +0.004s) update: 11/23 (+1) 'Calculating performance measures for the parameters suggested by Fujikawa et al. (fuj2)' {clear=TRUE, enabled=TRUE, status=}
+[12:40:29.244] (801.086s => +0.003s) update: 12/23 (+1) 'Calculating performance measures for the parameters suggested by Fujikawa et al. (fuj2)' {clear=TRUE, enabled=TRUE, status=}
+[12:41:04.368] (836.211s => +0.063s) update: 13/23 (+1) 'Calculating performance measures for the parameters suggested by Fujikawa et al. (fuj2)' {clear=TRUE, enabled=TRUE, status=}
+[12:41:05.731] (837.573s => +0.002s) update: 23/23 (+10) 'Calculating performance measures for the parameters suggested by Fujikawa et al. (fuj2)' {clear=TRUE, enabled=TRUE, status=}
+NULL
+R version 4.6.0 (2026-04-24)
+Platform: x86_64-pc-linux-gnu
+Running under: Rocky Linux 9.8 (Blue Onyx)
+
+Matrix products: default
+BLAS:   /opt/bwhpc/common/math/R/4.6.0-mkl-2025.0-gnu-14.2/lib64/R/lib/libRblas.so 
+LAPACK: /opt/bwhpc/common/math/R/4.6.0-mkl-2025.0-gnu-14.2/lib64/R/lib/libRlapack.so;  LAPACK version 3.12.1
+
+Random number generation:
+ RNG:     L'Ecuyer-CMRG 
+ Normal:  Inversion 
+ Sample:  Rejection 
+ 
+locale:
+ [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+ [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+ [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+ [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+ [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+
+time zone: Europe/Berlin
+tzcode source: system (glibc)
+
+attached base packages:
+[1] stats     graphics  grDevices datasets  utils     methods   base     
+
+other attached packages:
+ [1] microbenchmark_1.5.0 lubridate_1.9.5      forcats_1.0.1       
+ [4] stringr_1.6.0        dplyr_1.2.1          purrr_1.2.2         
+ [7] readr_2.2.0          tidyr_1.3.2          tibble_3.3.1        
+[10] ggplot2_4.0.3        tidyverse_2.0.0      doFuture_1.2.2      
+[13] future_1.70.0        foreach_1.5.2        baskoptr_1.0.4      
+[16] baskwrap_1.0.3       progressr_1.0.0      renv_1.2.3          
+
+loaded via a namespace (and not attached):
+ [1] baskexact_1.0.2        gtable_0.3.6           future.apply_1.20.2   
+ [4] compiler_4.6.0         Rcpp_1.1.2             tidyselect_1.2.1      
+ [7] parallel_4.6.0         optimizr_1.0.1         globals_0.19.1        
+[10] scales_1.4.0           here_1.0.2             R6_2.6.1              
+[13] generics_0.1.4         iterators_1.0.14       rprojroot_2.1.1       
+[16] basksim_2.2.0          tzdb_0.5.0             pillar_1.11.1         
+[19] RColorBrewer_1.1-3     rlang_1.3.0            stringi_1.8.7         
+[22] S7_0.2.2               timechange_0.4.0       cli_3.6.6             
+[25] withr_3.0.3            magrittr_2.0.5         metaheuristicOpt_2.0.0
+[28] digest_0.6.39          grid_4.6.0             hms_1.1.4             
+[31] lifecycle_1.0.5        vctrs_0.7.3            glue_1.8.1            
+[34] farver_2.1.2           listenv_1.0.0          codetools_0.2-20      
+[37] parallelly_1.48.0      tools_4.6.0            pkgconfig_2.0.3       

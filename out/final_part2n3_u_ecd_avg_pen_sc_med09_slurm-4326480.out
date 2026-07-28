@@ -1,0 +1,244 @@
+Comparison study: Utility-based optimization of Fujikawa’s basket trial design
+Log of job execution on bwForCluster BinAC 2
+Job name: part2n3_u_ecd_avg_pen_sc_med09
+Temporary directory: /scratch/4326480
+Date:
+Wed Jul 22 11:52:32 AM CEST 2026
+Node details:
+Linux node1-093 5.14.0-687.25.1.el9_8.x86_64 #1 SMP PREEMPT_DYNAMIC Mon Jul 13 14:58:05 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+
+
+--------------------------------------------------------------------------------
+Loading modules:
+
+
+--------------------------------------------------------------------------------
+Rscript output:
+Loading required package: renv
+
+Attaching package: ‘renv’
+
+The following objects are masked from ‘package:stats’:
+
+    embed, update
+
+The following objects are masked from ‘package:utils’:
+
+    history, upgrade
+
+The following objects are masked from ‘package:base’:
+
+    autoload, load, remove, use
+
+[1] "Start time: 2026-07-22 11:52:35.717263"
+
+Attaching package: ‘baskoptr’
+
+The following object is masked from ‘package:baskwrap’:
+
+    get_scenarios
+
+Loading required package: foreach
+Loading required package: future
+
+Attaching package: ‘future’
+
+The following objects are masked from ‘package:renv’:
+
+    plan, run
+
+── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.2.1     ✔ readr     2.2.0
+✔ forcats   1.0.1     ✔ stringr   1.6.0
+✔ ggplot2   4.0.3     ✔ tibble    3.3.1
+✔ lubridate 1.9.5     ✔ tidyr     1.3.2
+✔ purrr     1.2.2     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ purrr::accumulate() masks foreach::accumulate()
+✖ dplyr::filter()     masks stats::filter()
+✖ dplyr::lag()        masks stats::lag()
+✖ purrr::modify()     masks renv::modify()
+✖ purrr::when()       masks foreach::when()
+ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
+Study parameters assigned to global environment.
+All necessary folders were found.
+All necessary directories were found empty.
+Planning cluster session with 50 workers.
+Optimizing the utility function u_ecd_avg_pen for the scenario sc_med09.
+[11:57:25.260] (0.000s => +0.001s) initiate: 0/1003 (+0) '' {clear=TRUE, enabled=TRUE, status=}
+[11:57:25.285] (0.025s => +0.025s) update: 0/1003 (+0) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+Use of future_apply() in gridsearch is switched on.
+[11:57:52.407] (27.147s => +0.399s) update: 51/1003 (+51) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[11:58:08.097] (42.836s => +0.427s) update: 94/1003 (+43) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[11:58:14.410] (49.150s => +0.003s) update: 100/1003 (+6) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[11:58:19.689] (54.429s => +0.292s) update: 102/1003 (+2) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[11:58:24.702] (59.441s => +0.156s) update: 138/1003 (+36) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[11:58:46.182] (80.922s => +0.406s) update: 144/1003 (+6) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[11:58:51.279] (86.018s => +0.149s) update: 175/1003 (+31) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[11:58:59.251] (93.991s => +0.395s) update: 190/1003 (+15) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[11:59:12.322] (107.061s => +0.080s) update: 194/1003 (+4) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[11:59:17.660] (112.400s => +0.078s) update: 210/1003 (+16) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[11:59:22.676] (117.416s => +0.452s) update: 231/1003 (+21) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[11:59:28.054] (122.793s => +0.396s) update: 234/1003 (+3) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[11:59:35.968] (130.708s => +0.219s) update: 239/1003 (+5) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[11:59:41.649] (136.389s => +0.161s) update: 242/1003 (+3) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[11:59:46.702] (141.442s => +0.227s) update: 265/1003 (+23) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[11:59:51.889] (146.629s => +0.001s) update: 281/1003 (+16) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:00:05.737] (160.477s => +0.077s) update: 284/1003 (+3) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:00:11.120] (165.859s => +0.134s) update: 298/1003 (+14) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:00:16.165] (170.904s => +0.270s) update: 317/1003 (+19) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:00:21.379] (176.119s => +0.003s) update: 328/1003 (+11) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:00:26.620] (181.360s => +0.284s) update: 330/1003 (+2) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:00:32.954] (187.694s => +0.350s) update: 331/1003 (+1) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:00:38.010] (192.750s => +0.458s) update: 341/1003 (+10) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:00:43.274] (198.013s => +0.266s) update: 360/1003 (+19) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:00:49.723] (204.463s => +0.076s) update: 374/1003 (+14) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:01:00.140] (214.880s => +0.516s) update: 380/1003 (+6) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:01:05.619] (220.359s => +0.494s) update: 390/1003 (+10) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:01:10.829] (225.569s => +0.500s) update: 406/1003 (+16) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:01:16.380] (231.120s => +0.185s) update: 418/1003 (+12) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:01:23.784] (238.523s => +0.443s) update: 422/1003 (+4) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:01:29.696] (244.436s => +0.211s) update: 427/1003 (+5) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:01:35.029] (249.768s => +0.214s) update: 444/1003 (+17) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:01:40.824] (255.563s => +0.374s) update: 457/1003 (+13) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:01:47.602] (262.342s => +0.164s) update: 468/1003 (+11) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:01:54.131] (268.870s => +0.515s) update: 472/1003 (+4) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:01:59.134] (273.874s => +0.513s) update: 479/1003 (+7) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:02:04.149] (278.889s => +0.001s) update: 492/1003 (+13) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:02:09.399] (284.139s => +0.016s) update: 502/1003 (+10) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:02:15.713] (290.452s => +0.053s) update: 514/1003 (+12) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:02:21.111] (295.851s => +0.495s) update: 521/1003 (+7) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:02:26.755] (301.495s => +0.051s) update: 529/1003 (+8) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:02:31.887] (306.627s => +0.148s) update: 541/1003 (+12) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:02:37.114] (311.854s => +0.161s) update: 548/1003 (+7) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:02:42.339] (317.078s => +0.437s) update: 557/1003 (+9) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:02:47.573] (322.313s => +0.060s) update: 562/1003 (+5) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:02:52.823] (327.563s => +0.117s) update: 570/1003 (+8) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:02:57.996] (332.735s => +0.322s) update: 584/1003 (+14) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:03:03.211] (337.951s => +0.284s) update: 595/1003 (+11) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:03:08.471] (343.211s => +0.081s) update: 602/1003 (+7) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:03:14.547] (349.287s => +0.521s) update: 610/1003 (+8) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:03:20.193] (354.933s => +0.527s) update: 617/1003 (+7) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:03:25.407] (360.147s => +0.219s) update: 628/1003 (+11) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:03:30.446] (365.186s => +0.164s) update: 640/1003 (+12) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:03:35.568] (370.308s => +0.457s) update: 646/1003 (+6) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:03:41.731] (376.471s => +0.387s) update: 657/1003 (+11) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:03:47.043] (381.783s => +0.299s) update: 665/1003 (+8) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:03:52.629] (387.368s => +0.299s) update: 675/1003 (+10) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:03:57.701] (392.440s => +0.013s) update: 684/1003 (+9) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:04:03.111] (397.851s => +0.053s) update: 692/1003 (+8) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:04:08.519] (403.258s => +0.041s) update: 701/1003 (+9) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:04:13.857] (408.597s => +0.212s) update: 710/1003 (+9) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:04:19.428] (414.168s => +0.148s) update: 720/1003 (+10) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:04:24.678] (419.418s => +0.370s) update: 731/1003 (+11) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:04:30.315] (425.054s => +0.140s) update: 736/1003 (+5) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:04:36.115] (430.854s => +0.293s) update: 748/1003 (+12) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:04:41.293] (436.033s => +0.438s) update: 756/1003 (+8) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:04:46.934] (441.674s => +0.320s) update: 765/1003 (+9) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:04:53.696] (448.435s => +0.109s) update: 778/1003 (+13) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:04:58.873] (453.613s => +0.211s) update: 784/1003 (+6) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:05:04.247] (458.987s => +0.560s) update: 795/1003 (+11) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:05:09.633] (464.373s => +0.232s) update: 805/1003 (+10) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:05:16.091] (470.831s => +0.109s) update: 816/1003 (+11) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:05:21.509] (476.249s => +0.439s) update: 824/1003 (+8) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:05:26.566] (481.306s => +0.270s) update: 829/1003 (+5) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:05:31.728] (486.468s => +0.086s) update: 840/1003 (+11) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:05:37.344] (492.084s => +0.151s) update: 852/1003 (+12) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:05:43.087] (497.827s => +0.170s) update: 863/1003 (+11) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:05:48.508] (503.247s => +0.310s) update: 871/1003 (+8) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:05:53.634] (508.374s => +0.134s) update: 877/1003 (+6) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:05:59.177] (513.917s => +0.447s) update: 886/1003 (+9) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:06:04.336] (519.076s => +0.002s) update: 896/1003 (+10) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:06:09.637] (524.377s => +0.499s) update: 907/1003 (+11) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:06:16.019] (530.759s => +0.158s) update: 916/1003 (+9) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:06:22.073] (536.813s => +0.273s) update: 922/1003 (+6) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:06:27.668] (542.407s => +0.002s) update: 932/1003 (+10) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:06:34.004] (548.744s => +0.258s) update: 938/1003 (+6) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:06:40.077] (554.816s => +0.089s) update: 941/1003 (+3) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:06:45.405] (560.145s => +0.121s) update: 944/1003 (+3) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:06:53.398] (568.138s => +0.111s) update: 947/1003 (+3) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:07:02.168] (576.907s => +0.087s) update: 951/1003 (+4) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:07:10.313] (585.053s => +0.062s) update: 955/1003 (+4) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:07:18.183] (592.923s => +0.071s) update: 957/1003 (+2) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:07:26.500] (601.240s => +0.126s) update: 960/1003 (+3) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:07:32.086] (606.826s => +0.025s) update: 962/1003 (+2) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:07:39.535] (614.274s => +0.001s) update: 964/1003 (+2) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:07:45.317] (620.057s => +0.062s) update: 967/1003 (+3) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:07:58.164] (632.903s => +0.002s) update: 969/1003 (+2) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:08:03.507] (638.247s => +0.078s) update: 970/1003 (+1) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:08:10.944] (645.684s => +0.048s) update: 973/1003 (+3) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:08:16.425] (651.165s => +0.060s) update: 975/1003 (+2) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:08:24.878] (659.618s => +0.063s) update: 977/1003 (+2) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:08:36.438] (671.178s => +0.049s) update: 978/1003 (+1) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:08:44.198] (678.938s => +0.040s) update: 980/1003 (+2) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:08:51.113] (685.853s => +0.046s) update: 981/1003 (+1) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:09:01.692] (696.432s => +0.032s) update: 985/1003 (+4) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:09:17.196] (711.935s => +0.044s) update: 986/1003 (+1) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:09:27.001] (721.741s => +0.044s) update: 989/1003 (+3) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:09:32.364] (727.104s => +0.050s) update: 992/1003 (+3) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:09:43.241] (737.981s => +0.075s) update: 993/1003 (+1) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:09:52.278] (747.018s => +0.044s) update: 994/1003 (+1) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:09:57.500] (752.240s => +0.001s) update: 996/1003 (+2) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:10:05.511] (760.251s => +0.019s) update: 997/1003 (+1) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:10:46.063] (800.802s => +0.001s) update: 1001/1003 (+4) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[12:10:46.064] (800.804s => +0.000s) shutdown: 1003/1003 (+2) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+Calculating performance measures for optimal parameters found by utility function u_ecd_avg_pen in the scenario sc_med09
+[12:10:46.196] (0.000s => +0.001s) initiate: 0/22 (+0) '' {clear=TRUE, enabled=TRUE, status=}
+[12:10:46.196] (0.000s => +0.000s) update: 0/22 (+0) 'Calculating performance measures for optimal parameters found by utility function u_ecd_avg_pen in the scenario sc_med09' {clear=TRUE, enabled=TRUE, status=}
+[12:11:26.989] (40.793s => +0.043s) update: 3/22 (+3) 'Calculating performance measures for optimal parameters found by utility function u_ecd_avg_pen in the scenario sc_med09' {clear=TRUE, enabled=TRUE, status=}
+[12:13:51.812] (185.616s => +0.077s) update: 5/22 (+2) 'Calculating performance measures for optimal parameters found by utility function u_ecd_avg_pen in the scenario sc_med09' {clear=TRUE, enabled=TRUE, status=}
+[12:13:57.653] (191.457s => +0.016s) update: 8/22 (+3) 'Calculating performance measures for optimal parameters found by utility function u_ecd_avg_pen in the scenario sc_med09' {clear=TRUE, enabled=TRUE, status=}
+[12:17:24.232] (398.036s => +0.043s) update: 9/22 (+1) 'Calculating performance measures for optimal parameters found by utility function u_ecd_avg_pen in the scenario sc_med09' {clear=TRUE, enabled=TRUE, status=}
+[12:17:44.861] (418.666s => +0.002s) update: 13/22 (+4) 'Calculating performance measures for optimal parameters found by utility function u_ecd_avg_pen in the scenario sc_med09' {clear=TRUE, enabled=TRUE, status=}
+[12:17:50.076] (423.880s => +0.002s) update: 22/22 (+9) 'Calculating performance measures for optimal parameters found by utility function u_ecd_avg_pen in the scenario sc_med09' {clear=TRUE, enabled=TRUE, status=}
+[12:17:50.077] (423.881s => +0.003s) update: 22/22 (+0) 'Calculating performance measures for optimal parameters found by utility function u_ecd_avg_pen in the scenario sc_med09' {clear=TRUE, enabled=TRUE, status=}
+NULL
+R version 4.6.0 (2026-04-24)
+Platform: x86_64-pc-linux-gnu
+Running under: Rocky Linux 9.8 (Blue Onyx)
+
+Matrix products: default
+BLAS:   /opt/bwhpc/common/math/R/4.6.0-mkl-2025.0-gnu-14.2/lib64/R/lib/libRblas.so 
+LAPACK: /opt/bwhpc/common/math/R/4.6.0-mkl-2025.0-gnu-14.2/lib64/R/lib/libRlapack.so;  LAPACK version 3.12.1
+
+Random number generation:
+ RNG:     L'Ecuyer-CMRG 
+ Normal:  Inversion 
+ Sample:  Rejection 
+ 
+locale:
+ [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+ [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+ [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+ [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+ [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+
+time zone: Europe/Berlin
+tzcode source: system (glibc)
+
+attached base packages:
+[1] stats     graphics  grDevices datasets  utils     methods   base     
+
+other attached packages:
+ [1] microbenchmark_1.5.0 lubridate_1.9.5      forcats_1.0.1       
+ [4] stringr_1.6.0        dplyr_1.2.1          purrr_1.2.2         
+ [7] readr_2.2.0          tidyr_1.3.2          tibble_3.3.1        
+[10] ggplot2_4.0.3        tidyverse_2.0.0      doFuture_1.2.2      
+[13] future_1.70.0        foreach_1.5.2        baskoptr_1.0.4      
+[16] baskwrap_1.0.3       progressr_1.0.0      renv_1.2.3          
+
+loaded via a namespace (and not attached):
+ [1] baskexact_1.0.2        gtable_0.3.6           future.apply_1.20.2   
+ [4] compiler_4.6.0         Rcpp_1.1.2             tidyselect_1.2.1      
+ [7] parallel_4.6.0         optimizr_1.0.1         globals_0.19.1        
+[10] scales_1.4.0           here_1.0.2             R6_2.6.1              
+[13] generics_0.1.4         iterators_1.0.14       rprojroot_2.1.1       
+[16] basksim_2.2.0          tzdb_0.5.0             pillar_1.11.1         
+[19] RColorBrewer_1.1-3     rlang_1.3.0            stringi_1.8.7         
+[22] S7_0.2.2               timechange_0.4.0       cli_3.6.6             
+[25] withr_3.0.3            magrittr_2.0.5         metaheuristicOpt_2.0.0
+[28] digest_0.6.39          grid_4.6.0             hms_1.1.4             
+[31] lifecycle_1.0.5        vctrs_0.7.3            glue_1.8.1            
+[34] farver_2.1.2           listenv_1.0.0          codetools_0.2-20      
+[37] parallelly_1.48.0      tools_4.6.0            pkgconfig_2.0.3       
