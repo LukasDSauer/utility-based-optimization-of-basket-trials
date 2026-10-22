@@ -337,12 +337,13 @@ master_run_file_path <- here::here("final", "master_run_final_part4.sh")
 master_mktmpdir_path <- here::here("final", "master_mktmpdir_part4.sh")
 cat(disclaimer_auto, file = master_run_file_path)
 cat(disclaimer_auto, file = master_mktmpdir_path)
-job_name <- "part4"
-tmp_file_name <- paste0("tmp_", job_name)
-bash_file_name <- paste0("run_final_", job_name, ".sh")
-if (!dir.exists(here::here("out", tmp_file_name))) {
-  dir.create(here::here("out", tmp_file_name))
-}
+for (sc in sc_keys) {
+    job_name <- paste("part4", sc, sep = "_")
+    tmp_file_name <- paste0("tmp_", job_name)
+    bash_file_name <- paste0("run_final_", job_name, ".sh")
+    if (!dir.exists(here::here("out", tmp_file_name))) {
+      dir.create(here::here("out", tmp_file_name))
+    }
 # GENERATING R SCRIPT
 cat(
   paste0(
@@ -368,6 +369,9 @@ handlers(handler_debug(interval = 5))
 print(paste("Start time:", Sys.time()))
 run_part4(file_prefix = "final_",
           baby_setup = FALSE,
+          sc_keys_override = "',
+    sc,
+    '",
           workers = ',
     nworkers,
     ',
@@ -381,19 +385,20 @@ print(sessionInfo())'
   ),
   file = here::here("final", paste0("run_final_", job_name, ".R"))
 )
-# GENERATING BASH SCRIPT
-cat(
-  bash_string(part = "part4", jobname, ntasks, memsize),
-  file = here::here("final", bash_file_name)
-)
-# ADD COMMAND TO BASH FILE
-cat(
-  text = paste0("sbatch final/", bash_file_name, "\n"),
-  file = master_run_file_path,
-  append = TRUE
-)
-cat(
-  text = paste0("mkdir out/", tmp_file_name, "\n"),
-  file = master_mktmpdir_path,
-  append = TRUE
-)
+  # GENERATING BASH SCRIPT
+  cat(
+    bash_string(part = "part4", jobname, ntasks, memsize),
+    file = here::here("final", bash_file_name)
+  )
+  # ADD COMMAND TO BASH FILE
+  cat(
+    text = paste0("sbatch final/", bash_file_name, "\n"),
+    file = master_run_file_path,
+    append = TRUE
+  )
+  cat(
+    text = paste0("mkdir out/", tmp_file_name, "\n"),
+    file = master_mktmpdir_path,
+    append = TRUE
+  )
+}

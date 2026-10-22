@@ -6,12 +6,16 @@
 ################################################################################
 
 #' Run the exploratory analyses of the comparison study ("part IV")
+#' 
+#' By default, the comparison of HLD and JSD is run for `"sc_bau04"`, but other
+#' scenario sets can be specified via `sc_keys_override`
 #'
 #' @inheritParams run_part1
 #' 
 #' @return `NULL`, results are saved in the `./out/` folder.
 run_part4 <- function(file_prefix,
                       baby_setup = FALSE,
+                      sc_keys_override = NULL,
                       workers = 20,
                       tmp = "tmp",
                       strategy = ifelse(Sys.info()["sysname"] == "Linux",
@@ -22,6 +26,13 @@ run_part4 <- function(file_prefix,
   check_output_dirs(c("./out", paste0("./out/", tmp)))
   check_empty_dirs(paste0("./out/", tmp))
   # Load algorithm, scenario and utility function
+  if(!is.null(sc_keys_override)){
+    if(length(sc_keys_override) > 1){
+      stop("For part 4, sc_keys_override can only contain one element. (This could be adapted in the future.)")
+    }
+    # Default of sc_explo comes from setup_study()
+    sc_explo <- sc_keys_override
+  }
   algorithm <- algorithms[[alg_explo]]
   
   algorithm_params <- alg_params[[alg_explo]]
@@ -32,18 +43,30 @@ run_part4 <- function(file_prefix,
                                        utility_params = u_params[[u_explo]],
                                        scenario = scenario)
   set.seed(20250610, kind = "L'Ecuyer-CMRG")
-  plan(strategy = strategy, workers = workers)
+  future::plan(strategy = strategy, workers = workers)
   
   # QUESTION 1:
   # Can the Jensen-Shannon divergence be replaced by the Hellinger distance?
   # How does this change the performance measures?
   message("Part 4: Exploratory analysis - Comparison of JSD and HLD")
-  explo1_tag <- "jsd_vs_hld"
-  design <- baskwrap::setup_fujikawa_x(k = scenario$k,
-                                       shape1 = shape1, shape2 = shape2,
-                                       p0 = scenario$p0,
-                                       backend = "exact")
-  detail_params <- detail_params_exact
+  explo1_tag <- paste0("jsd_vs_hld_", sc_explo)
+  if(sc_explo %in% sc_keys_exact){
+    # - Scenarios where baskexact will be used as a backend
+    design <- baskwrap::setup_fujikawa_x(k = scenario$k,
+                                         shape1 = shape1, shape2 = shape2,
+                                         p0 = scenario$p0,
+                                         backend = "exact")
+    detail_params <- detail_params_exact
+  } else if(sc_explo %in% sc_keys_sim){
+    # - Scenarios where basksim will be used as a backend
+    design <- baskwrap::setup_fujikawa_x(k = scenario$k,
+                                         shape1 = shape1, shape2 = shape2,
+                                         p0 = scenario$p0,
+                                         backend = "sim")
+    detail_params <- detail_params_sim
+  } else {
+    stop("Scenario is invalid!")
+  }
   detail_params$n <- scenario$n
   # Optimize design with custom weight matrix
   opt_with_weight_custom <- function(weight_custom, id){
@@ -60,11 +83,14 @@ run_part4 <- function(file_prefix,
     globals_for_future <- structure(TRUE,
                                     add = c("weight_custom"))
     options_future <- list(seed = TRUE,
-                           globals = globals_for_future)
+                           globals = globals_for_future,
+                           packages = c("foreach"))
     algorithm_params$control <-
       c(algorithm_params$control,
         list(future_apply_options =
-               list(future.globals = globals_for_future)))
+               list(future.globals = globals_for_future,
+                    future.seed = options_future$seed,
+                    future.packages = options_future$packages)))
     time_opt <- system.time(res_opt <- opt_design_gen(design = design,
                               utility = utility,
                               algorithm =
@@ -129,7 +155,7 @@ run_part4 <- function(file_prefix,
     design = design, n = scenario$n))
   res_hld <- opt_with_weight_custom(weight_custom = weight_custom, id = "hld")
   # LOAD RESULTS
-  results <- list_out_files(4, paste0("res_list_raw_explo"),
+  results <- list_out_files(4, paste0("res_list_raw_", sc_explo),
                             file_prefix, path = paste0("./out/", tmp)) %>%
     map(readRDS)
   # COMBINE AND SAVE RESULTS
@@ -167,7 +193,7 @@ run_part4 <- function(file_prefix,
                                     logbase = detail_params$logbase))
   saveRDS(object = fig_jsd,
           file = out_file(part = 4, "weights",
-                          fname1 = alg_explo, fname2 = "jsd", "RDS",
+                          fname1 = alg_explo, fname2 = paste0("jsd_", sc_explo), "RDS",
                           file_prefix = file_prefix))
   fig_hld <- plot_weights(design = design, n = scenario$n, r1 = floor(scenario$n/3), 
                weight_fun = weights_hld,
@@ -176,45 +202,47 @@ run_part4 <- function(file_prefix,
                                     logbase = detail_params$logbase))
   saveRDS(object = fig_hld,
           file = out_file(part = 4, "weights",
-                          fname1 = alg_explo, fname2 = "hld", "RDS",
+                          fname1 = alg_explo, fname2 = paste0("hld_", sc_explo), "RDS",
                           file_prefix = file_prefix))
   
-  # QUESTION 2:
-  # How does borrowing affect the maximal TOER?
-  message("Part 4: Exploratory analysis - Effect of borrowing on TOER")
-  design_02 <- baskwrap::setup_fujikawa_x(k = 2,
-                                       shape1 = shape1, shape2 = shape2,
-                                       p0 = 0.2,
-                                       backend = "exact")
-  p0 <- 0.2
-  p1s <- seq(p0, 1, by = 0.05)
-  dat_explo_reject02 <- data.frame(expand.grid(p1 = p1s, 
-                                           epsilon = 
-                                             alg_params$alg_grd$axes$epsilon, 
-                                           tau = alg_params$alg_grd$axes$tau))
-  dat_explo_reject02 <- foreach(i=(1:nrow(dat_explo_reject02)),
-                            .combine = rbind) %dofuture% {
-    p1 <- dat_explo_reject02$p1[i]
-    epsilon <- dat_explo_reject02$epsilon[i]
-    tau <- dat_explo_reject02$tau[i]
-    det <- get_details(
-      design_02,
-      n = 15,
-      p1 = c(p0, p1),
-      lambda = 0.95,
-      epsilon = epsilon,
-      tau = tau,
-      logbase = detail_params_exact$logbase,
-      weight_fun = detail_params_exact$weight_fun,
-      which_details = "Rejection_Probabilities",
-      verbose = FALSE)
-    return(data.frame(p1 = p1, epsilon = epsilon, tau = tau,
-                      toer01 = det$Rejection_Probabilities[1], 
-                      power02 = det$Rejection_Probabilities[2]))
+  if(sc_explo == "sc_bau04"){
+    # QUESTION 2:
+    # How does borrowing affect the maximal TOER?
+    message("Part 4: Exploratory analysis - Effect of borrowing on TOER")
+    design_02 <- baskwrap::setup_fujikawa_x(k = 2,
+                                         shape1 = shape1, shape2 = shape2,
+                                         p0 = 0.2,
+                                         backend = "exact")
+    p0 <- 0.2
+    p1s <- seq(p0, 1, by = 0.05)
+    dat_explo_reject02 <- data.frame(expand.grid(p1 = p1s, 
+                                             epsilon = 
+                                               alg_params$alg_grd$axes$epsilon, 
+                                             tau = alg_params$alg_grd$axes$tau))
+    dat_explo_reject02 <- foreach(i=(1:nrow(dat_explo_reject02)),
+                              .combine = rbind) %dofuture% {
+      p1 <- dat_explo_reject02$p1[i]
+      epsilon <- dat_explo_reject02$epsilon[i]
+      tau <- dat_explo_reject02$tau[i]
+      det <- get_details(
+        design_02,
+        n = 15,
+        p1 = c(p0, p1),
+        lambda = 0.95,
+        epsilon = epsilon,
+        tau = tau,
+        logbase = detail_params_exact$logbase,
+        weight_fun = detail_params_exact$weight_fun,
+        which_details = "Rejection_Probabilities",
+        verbose = FALSE)
+      return(data.frame(p1 = p1, epsilon = epsilon, tau = tau,
+                        toer01 = det$Rejection_Probabilities[1], 
+                        power02 = det$Rejection_Probabilities[2]))
+    }
+    saveRDS(object = dat_explo_reject02,
+            file = out_file(part = 4, "two",
+                            fname1 = "basket", fname2 = "reject", "RDS",
+                            file_prefix = file_prefix))
   }
-  saveRDS(object = dat_explo_reject02,
-          file = out_file(part = 4, "two",
-                          fname1 = "basket", fname2 = "reject", "RDS",
-                          file_prefix = file_prefix))
 }
 

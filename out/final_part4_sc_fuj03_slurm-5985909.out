@@ -1,0 +1,171 @@
+Comparison study: Utility-based optimization of Fujikawa’s basket trial design
+Log of job execution on bwForCluster BinAC 2
+Job name: part4_sc_fuj03
+Temporary directory: /scratch/5985909
+Date:
+Thu Oct 22 04:36:34 PM CEST 2026
+Node details:
+Linux node1-076 5.14.0-687.59.1.el9_8.x86_64 #1 SMP PREEMPT_DYNAMIC Wed Oct 21 13:47:53 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+
+
+--------------------------------------------------------------------------------
+Loading modules:
+Loading module dependency 'toolkit/intel/OneAPI-2025.0'
+
+	 Module toolkit/intel/OneAPI-2025.0 has been loaded
+
+	 Activated the Intel® toolkit:
+		 Toolkit collection version 2025.0.1
+
+	 Please load further packages for using tools
+		 use 'module help' to get a list of installed tools
+
+Loading module dependency 'compiler/gnu/14.2'
+Loading module dependency 'mkl/2025.0'
+
+
+--------------------------------------------------------------------------------
+Rscript output:
+Loading required package: renv
+
+Attaching package: ‘renv’
+
+The following objects are masked from ‘package:stats’:
+
+    embed, update
+
+The following objects are masked from ‘package:utils’:
+
+    history, upgrade
+
+The following objects are masked from ‘package:base’:
+
+    autoload, load, remove, use
+
+[1] "Start time: 2026-10-22 16:36:41.097854"
+
+Attaching package: ‘baskoptr’
+
+The following object is masked from ‘package:baskwrap’:
+
+    get_scenarios
+
+Loading required package: foreach
+Loading required package: future
+
+Attaching package: ‘future’
+
+The following objects are masked from ‘package:renv’:
+
+    plan, run
+
+── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.2.1     ✔ readr     2.2.0
+✔ forcats   1.0.1     ✔ stringr   1.6.0
+✔ ggplot2   4.0.3     ✔ tibble    3.3.1
+✔ lubridate 1.9.5     ✔ tidyr     1.3.2
+✔ purrr     1.2.2     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ purrr::accumulate() masks foreach::accumulate()
+✖ dplyr::filter()     masks stats::filter()
+✖ dplyr::lag()        masks stats::lag()
+✖ purrr::modify()     masks renv::modify()
+✖ purrr::when()       masks foreach::when()
+ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
+Study parameters assigned to global environment.
+All necessary folders were found.
+All necessary directories were found empty.
+Part 4: Exploratory analysis - Comparison of JSD and HLD
+[16:40:20.418] (0.000s => +0.001s) initiate: 0/1003 (+0) '' {clear=TRUE, enabled=TRUE, status=}
+[16:40:20.445] (0.027s => +0.027s) update: 0/1003 (+0) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+Use of future_apply() in gridsearch is switched on.
+[16:40:26.230] (5.812s => +0.477s) update: 101/1003 (+101) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[16:40:31.240] (10.821s => +0.183s) update: 204/1003 (+103) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[16:40:36.257] (15.839s => +0.494s) update: 314/1003 (+110) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[16:40:41.368] (20.950s => +0.253s) update: 419/1003 (+105) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[16:40:46.399] (25.981s => +0.196s) update: 523/1003 (+104) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[16:40:51.422] (31.004s => +0.390s) update: 624/1003 (+101) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[16:40:56.430] (36.012s => +0.486s) update: 727/1003 (+103) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[16:41:01.476] (41.058s => +0.002s) update: 830/1003 (+103) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[16:41:06.567] (46.149s => +0.293s) update: 932/1003 (+102) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[16:41:11.842] (51.424s => +0.049s) update: 981/1003 (+49) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[16:41:16.985] (56.567s => +0.027s) update: 990/1003 (+9) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[16:41:22.385] (61.967s => +0.004s) update: 996/1003 (+6) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[16:41:28.941] (68.523s => +0.001s) update: 1001/1003 (+5) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[16:41:28.943] (68.525s => +0.001s) shutdown: 1003/1003 (+2) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+Calculating performance measures for optimal parameters found by utility function u_2pow_avg_pen in the scenario sc_fuj03
+[16:41:28.966] (0.000s => +0.001s) initiate: 0/16 (+0) '' {clear=TRUE, enabled=TRUE, status=}
+[16:41:28.966] (0.001s => +0.000s) update: 0/16 (+0) 'Calculating performance measures for optimal parameters found by utility function u_2pow_avg_pen in the scenario sc_fuj03' {clear=TRUE, enabled=TRUE, status=}
+[16:41:34.909] (5.943s => +0.001s) update: 12/16 (+12) 'Calculating performance measures for optimal parameters found by utility function u_2pow_avg_pen in the scenario sc_fuj03' {clear=TRUE, enabled=TRUE, status=}
+[16:41:37.213] (8.248s => +0.001s) update: 16/16 (+4) 'Calculating performance measures for optimal parameters found by utility function u_2pow_avg_pen in the scenario sc_fuj03' {clear=TRUE, enabled=TRUE, status=}
+[16:41:37.530] (0.000s => +0.001s) initiate: 0/1003 (+0) '' {clear=TRUE, enabled=TRUE, status=}
+[16:41:37.530] (0.001s => +0.000s) update: 0/1003 (+0) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+Use of future_apply() in gridsearch is switched on.
+[16:41:43.374] (5.844s => +0.140s) update: 132/1003 (+132) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[16:41:48.380] (10.850s => +0.016s) update: 233/1003 (+101) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[16:41:53.403] (15.873s => +0.098s) update: 329/1003 (+96) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[16:41:58.620] (21.090s => +0.034s) update: 430/1003 (+101) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[16:42:03.674] (26.144s => +0.215s) update: 527/1003 (+97) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[16:42:08.797] (31.267s => +0.059s) update: 626/1003 (+99) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[16:42:13.830] (36.300s => +0.526s) update: 728/1003 (+102) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[16:42:18.886] (41.357s => +0.032s) update: 829/1003 (+101) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[16:42:23.926] (46.396s => +0.117s) update: 929/1003 (+100) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[16:42:28.939] (51.409s => +0.012s) update: 968/1003 (+39) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[16:42:33.965] (56.435s => +0.012s) update: 984/1003 (+16) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[16:42:39.114] (61.584s => +0.037s) update: 994/1003 (+10) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[16:42:45.710] (68.180s => +0.002s) update: 1000/1003 (+6) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+[16:42:48.227] (70.697s => +0.000s) shutdown: 1003/1003 (+3) 'Running grid search.' {clear=TRUE, enabled=TRUE, status=}
+Calculating performance measures for optimal parameters found by utility function u_2pow_avg_pen in the scenario sc_fuj03
+[16:42:48.229] (0.000s => +0.001s) initiate: 0/16 (+0) '' {clear=TRUE, enabled=TRUE, status=}
+[16:42:48.229] (0.001s => +0.000s) update: 0/16 (+0) 'Calculating performance measures for optimal parameters found by utility function u_2pow_avg_pen in the scenario sc_fuj03' {clear=TRUE, enabled=TRUE, status=}
+[16:42:54.057] (5.828s => +0.004s) update: 11/16 (+11) 'Calculating performance measures for optimal parameters found by utility function u_2pow_avg_pen in the scenario sc_fuj03' {clear=TRUE, enabled=TRUE, status=}
+[16:42:56.524] (8.295s => +0.006s) update: 16/16 (+5) 'Calculating performance measures for optimal parameters found by utility function u_2pow_avg_pen in the scenario sc_fuj03' {clear=TRUE, enabled=TRUE, status=}
+R version 4.6.0 (2026-04-24)
+Platform: x86_64-pc-linux-gnu
+Running under: Rocky Linux 9.8 (Blue Onyx)
+
+Matrix products: default
+BLAS:   /opt/bwhpc/common/math/R/4.6.0-mkl-2025.0-gnu-14.2/lib64/R/lib/libRblas.so 
+LAPACK: /opt/bwhpc/common/math/R/4.6.0-mkl-2025.0-gnu-14.2/lib64/R/lib/libRlapack.so;  LAPACK version 3.12.1
+
+Random number generation:
+ RNG:     L'Ecuyer-CMRG 
+ Normal:  Inversion 
+ Sample:  Rejection 
+ 
+locale:
+ [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+ [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+ [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+ [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+ [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+
+time zone: Europe/Berlin
+tzcode source: system (glibc)
+
+attached base packages:
+[1] stats     graphics  grDevices datasets  utils     methods   base     
+
+other attached packages:
+ [1] microbenchmark_1.5.0 lubridate_1.9.5      forcats_1.0.1       
+ [4] stringr_1.6.0        dplyr_1.2.1          purrr_1.2.2         
+ [7] readr_2.2.0          tidyr_1.3.2          tibble_3.3.1        
+[10] ggplot2_4.0.3        tidyverse_2.0.0      doFuture_1.2.2      
+[13] future_1.70.0        foreach_1.5.2        baskoptr_1.0.4      
+[16] baskwrap_1.0.3       progressr_1.0.0      renv_1.2.3          
+
+loaded via a namespace (and not attached):
+ [1] baskexact_1.0.2        gtable_0.3.6           future.apply_1.20.2   
+ [4] compiler_4.6.0         Rcpp_1.1.2             tidyselect_1.2.1      
+ [7] parallel_4.6.0         optimizr_1.0.1         globals_0.19.1        
+[10] scales_1.4.0           here_1.0.2             R6_2.6.1              
+[13] generics_0.1.4         iterators_1.0.14       rprojroot_2.1.1       
+[16] basksim_2.2.0          tzdb_0.5.0             pillar_1.11.1         
+[19] RColorBrewer_1.1-3     rlang_1.3.0            stringi_1.8.7         
+[22] S7_0.2.2               timechange_0.4.0       cli_3.6.6             
+[25] withr_3.0.3            magrittr_2.0.5         metaheuristicOpt_2.0.0
+[28] digest_0.6.39          grid_4.6.0             hms_1.1.4             
+[31] lifecycle_1.0.5        vctrs_0.7.3            glue_1.8.1            
+[34] farver_2.1.2           listenv_1.0.0          codetools_0.2-20      
+[37] parallelly_1.48.0      tools_4.6.0            pkgconfig_2.0.3       

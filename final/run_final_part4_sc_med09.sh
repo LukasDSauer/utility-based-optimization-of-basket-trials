@@ -7,9 +7,9 @@
 #SBATCH --ntasks=100
 #SBATCH --time=9-12
 #SBATCH --mem=400g
-#SBATCH --job-name=part4
+#SBATCH --job-name=part4_sc_med09
 #SBATCH --partition=compute
-#SBATCH --output="out/final_part4_slurm-%j.out"
+#SBATCH --output="out/final_part4_sc_med09_slurm-%j.out"
 
 # SESSION INFO
 echo "Comparison study: Utility-based optimization of Fujikawa’s basket trial design"
@@ -34,4 +34,4 @@ echo ""
 # RUN R RSCRIPT
 echo "--------------------------------------------------------------------------------"
 echo "Rscript output:"
-Rscript  final/run_final_part4.R
+Rscript  final/run_final_part4_sc_med09.R

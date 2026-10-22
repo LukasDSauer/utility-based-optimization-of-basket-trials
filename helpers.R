@@ -103,7 +103,7 @@ save_res_list <- function(data, file_prefix = "", part = 1) {
     fname1 <- data$alg
     fname2 <- data$u
   } else if (part == 4) {
-    file <- paste0("res_list_raw_explo")
+    file <- paste0("res_list_raw_", data$sc)
     fname1 <- data$id
     fname2 <- data$u
   }

@@ -20,8 +20,9 @@ handlers(handler_debug(interval = 5))
 print(paste("Start time:", Sys.time()))
 run_part4(file_prefix = "final_",
           baby_setup = FALSE,
+          sc_keys_override = "sc_lrg20",
           workers = 50,
-          tmp = "tmp_part4",
+          tmp = "tmp_part4_sc_lrg20",
           strategy = "cluster")
           
 # LOG SESSION INFORMATION
